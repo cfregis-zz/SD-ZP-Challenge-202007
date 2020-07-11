@@ -9,4 +9,5 @@ The challenge_collection file could be imported on postman to use the HTTP metho
 To run this project execute the following commands:
 
 cd clients/
+
 mvn spring-boot:run
