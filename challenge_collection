@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "clients",
+		"_postman_id": "ba709484-fa7e-317a-dfb7-04b75438b452",
+		"description": "api for clients manipulation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST CLIENT",
+			"request": {
+				"url": "http://localhost:8080/v1/client/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": {\r\n    \"city\": \"recife\",\r\n    \"postalCode\": \"50860015\",\r\n    \"province\": \"pe\",\r\n    \"street\": \"av tapajos\"\r\n  },\r\n  \"cpf\": \"07681063463\",\r\n  \"dateBirthday\": \"1991-01-01\",\r\n  \"mail\": \"filipe.regis@hotmail.com\",\r\n  \"name\": \"carlos filipe\"\r\n}"
+				},
+				"description": "POST CLIENT REQUEST"
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST CLIENTS",
+			"request": {
+				"url": "http://localhost:8080/v1/client/list",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET LIST CLIENTS"
+			},
+			"response": []
+		},
+		{
+			"name": "CLIENT UPDATE",
+			"request": {
+				"url": "http://localhost:8080/v1/client/update",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"carlos filipe da cruz regis\",\n    \"dateBirthday\": \"1991-01-01\",\n    \"mail\": \"filipe.regis@hotmail.com\",\n    \"cpf\": \"07681063463\",\n    \"address\": {\n        \"id\": 1,\n        \"street\": \"avenida tapajos\",\n        \"city\": \"recife\",\n        \"province\": \"pe\",\n        \"postalCode\": \"50860015\"\n    }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET CLIENT BY ID",
+			"request": {
+				"url": "http://localhost:8080/v1/client/show/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET CLIENT BY ID"
+			},
+			"response": []
+		},
+		{
+			"name": "CLIENT DELETE",
+			"request": {
+				"url": "http://localhost:8080/v1/client/delete/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "CLIENT DELETE"
+			},
+			"response": []
+		}
+	]
+}
